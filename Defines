@@ -1,0 +1,214 @@
+/////////////////////////////////////////////////////
+//Menu by trapxxgods--- Dont yoink plz
+/////////////////////////////////////////////////////
+// Discord: SuhMyDude#3949 
+/////////////////////////////////////////////////////
+// Steam: https://steamcommunity.com/id/Trapxxgods/
+/////////////////////////////////////////////////////
+controls[]=
+{
+	TMPicture,
+	TMPicture2,
+	TMPicture6,
+	TMPicture5,
+	TMText,
+	TMPicture3,
+	TMPicture4,
+	TMListbox1,
+	TMButton1,
+	TMButton2,
+	TMButton3,
+	TMButton4,
+	TMButton5,
+	TMListbox2,
+	TMButton6
+};
+class tmenu {
+    idd = 7777;
+    movingenable=0;
+    class Controls
+    { 
+class TMPicture: RscPicture
+{
+	idc = 1200;
+	text = "#(argb,8,8,3)color(1,1,1,1)";
+	x = 0.303125 * safezoneW + safezoneX;
+	y = 0.108 * safezoneH + safezoneY;
+	w = 0.380625 * safezoneW;
+	h = 0.756 * safezoneH;
+	colorText[] = {0,0,0,0.7};
+	colorBackground[] = {0,0,0,0.7};
+	colorActive[] = {0,0,0,0.7};
+};
+class TMPicture2: RscPicture
+{
+	idc = 1201;
+	text = "#(argb,8,8,3)color(1,1,1,1)";
+	x = 0.303125 * safezoneW + safezoneX;
+	y = 0.108 * safezoneH + safezoneY;
+	w = 0.380625 * safezoneW;
+	h = 0.014 * safezoneH;
+	colorText[] = {0.545,0,0,1};
+	colorBackground[] = {0.545,0,0,1};
+	colorActive[] = {0.545,0,0,1};
+};
+class TMPicture3: RscPicture
+{
+	idc = 1202;
+	text = "#(argb,8,8,3)color(1,1,1,1)";
+	x = 0.303125 * safezoneW + safezoneX;
+	y = 0.85 * safezoneH + safezoneY;
+	w = 0.380625 * safezoneW;
+	h = 0.014 * safezoneH;
+	colorText[] = {0.545,0,0,1};
+	colorBackground[] = {0.545,0,0,1};
+	colorActive[] = {0.545,0,0,1};
+};
+class TMPicture4: RscPicture
+{
+	idc = 1203;
+	text = "#(argb,8,8,3)color(1,1,1,1)";
+	x = 0.303125 * safezoneW + safezoneX;
+	y = 0.108 * safezoneH + safezoneY;
+	w = 0.0065625 * safezoneW;
+	h = 0.756 * safezoneH;
+	colorText[] = {0.545,0,0,1};
+	colorBackground[] = {0.545,0,0,1};
+	colorActive[] = {0.545,0,0,1};
+};
+class TMPicture5: RscPicture
+{
+	idc = 1204;
+	text = "#(argb,8,8,3)color(1,1,1,1)";
+	x = 0.677188 * safezoneW + safezoneX;
+	y = 0.108 * safezoneH + safezoneY;
+	w = 0.0065625 * safezoneW;
+	h = 0.756 * safezoneH;
+	colorText[] = {0.545,0,0,1};
+	colorBackground[] = {0.545,0,0,1};
+	colorActive[] = {0.545,0,0,1};
+};
+class TMPicture6: RscPicture
+{
+	idc = 1205;
+	text = "#(argb,8,8,3)color(1,1,1,1)";
+	x = 0.303125 * safezoneW + safezoneX;
+	y = 0.164 * safezoneH + safezoneY;
+	w = 0.380625 * safezoneW;
+	h = 0.014 * safezoneH;
+	colorText[] = {0.545,0,0,1};
+	colorBackground[] = {0.545,0,0,1};
+	colorActive[] = {0.545,0,0,1};
+};
+class TMListbox1: RscListbox
+{
+	idc = 1500;
+	x = 0.31625 * safezoneW + safezoneX;
+	y = 0.192 * safezoneH + safezoneY;
+	w = 0.249375 * safezoneW;
+	h = 0.574 * safezoneH;
+	colorBackground[] = {0,0,0,0.7};
+	colorActive[] = {0,0,0,0.7};
+};
+class TMListbox2: RscListbox
+{
+	idc = 1501;
+	x = 0.572187 * safezoneW + safezoneX;
+	y = 0.612 * safezoneH + safezoneY;
+	w = 0.091875 * safezoneW;
+	h = 0.182 * safezoneH;
+	colorBackground[] = {0,0,0,0.7};
+	colorActive[] = {0,0,0,0.7};
+	onMouseButtonDblClick = "call TView";
+};
+class TMButton1: RscButton
+{
+	idc = 1600;
+	text = "EXIT"; //--- ToDo: Localize;
+	x = 0.454062 * safezoneW + safezoneX;
+	y = 0.794 * safezoneH + safezoneY;
+	w = 0.0590625 * safezoneW;
+	h = 0.042 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0,0,0,0.7};
+	colorActive[] = {0,0,0,0.7};
+	onMouseButtonClick = "closeDialog 0;";
+};
+class TMButton2: RscButton
+{
+	idc = 1601;
+	text = "Toggle Grass"; //--- ToDo: Localize;
+	x = 0.57875 * safezoneW + safezoneX;
+	y = 0.22 * safezoneH + safezoneY;
+	w = 0.0853125 * safezoneW;
+	h = 0.028 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0,0,0,0.7};
+	colorActive[] = {0,0,0,0.7};
+	onButtonClick = "execVM 'FG\tmenu\scripts\toggleenviron.sqf';";
+};
+class TMButton3: RscButton
+{
+	idc = 1602;
+	text = "Craft Menu"; //--- ToDo: Localize;
+	x = 0.57875 * safezoneW + safezoneX;
+	y = 0.29 * safezoneH + safezoneY;
+	w = 0.0853125 * safezoneW;
+	h = 0.028 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0,0,0,0.7};
+	colorActive[] = {0,0,0,0.7};
+	onButtonClick = "closeDialog 0;createDialog 'CM_CraftingDialog';";
+};
+class TMButton4: RscButton
+{
+	idc = 1603;
+	text = "Find Vehicle"; //--- ToDo: Localize;
+	x = 0.57875 * safezoneW + safezoneX;
+	y = 0.36 * safezoneH + safezoneY;
+	w = 0.0853125 * safezoneW;
+	h = 0.028 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0,0,0,0.7};
+	colorActive[] = {0,0,0,0.7};
+	onButtonClick = "closeDialog 0;  execVM 'FG\tmenu\scripts\locatevehicle.sqf';";
+};
+class TMButton5: RscButton
+{
+	idc = 1604;
+	text = "Group Manager"; //--- ToDo: Localize;
+	x = 0.57875 * safezoneW + safezoneX;
+	y = 0.43 * safezoneH + safezoneY;
+	w = 0.0853125 * safezoneW;
+	h = 0.028 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0,0,0,0.7};
+	colorActive[] = {0,0,0,0.7};
+	onMouseButtonClick = "closeDialog 0; if (dayz_requireRadio && !('ItemRadio' in items player)) then { localize 'STR_EPOCH_NEED_RADIO' call dayz_rollingMessages;	} else { if (!isNil 'dayz_groupInit') then { [] spawn dayz_openGroupDialog;};	};";
+};
+class TMButton6: RscButton
+{
+	idc = 1605;
+	text = "Toggle Sound"; //--- ToDo: Localize;
+	x = 0.57875 * safezoneW + safezoneX;
+	y = 0.5 * safezoneH + safezoneY;
+	w = 0.0853125 * safezoneW;
+	h = 0.028 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0,0,0,0.7};
+	colorActive[] = {0,0,0,0.7};
+	onButtonClick = "execVM 'FG\tmenu\scripts\toggleenviron.sqf';";
+};
+class TMText: RscText
+{
+	idc = 1000;
+	text = "                         CY6 Server menu"; 
+	x = 0.309687 * safezoneW + safezoneX;
+	y = 0.122 * safezoneH + safezoneY;
+	w = 0.360937 * safezoneW;
+	h = 0.042 * safezoneH;
+	colorBackground[] = {0,0,0,0.7};
+	colorActive[] = {0,0,0,0.7};
+};
+};
+};
